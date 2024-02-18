@@ -1,0 +1,94 @@
+.cc-num-field-icon {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  padding: 0 0.75rem;
+
+  svg {
+    margin: auto;
+    max-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.cc-unk-num-field-icon {
+  background: #2e5895;
+
+  svg {
+    border: 1px solid #a9a9a9;
+    border-radius: 0 4px;
+  }
+}
+
+.cc-jc-num-field-icon,
+.cc-cu-num-field-icon {
+  background: #0e4c96;
+}
+
+.cc-ve-num-field-icon,
+.cc-vi-num-field-icon {
+  background: #25459a;
+}
+
+.cc-ca-num-field-icon,
+.cc-to-num-field-icon {
+  background: #10427a;
+}
+
+.cc-n-num-field-icon {
+  background: #e21e27;
+}
+
+.cc-dc-num-field-icon {
+  background: #0079be;
+}
+
+.cc-ds-num-field-icon {
+  background: #f58220;
+
+  &.gradient svg path:nth-child(3),
+  &.gradient svg path + path {
+    display: none;
+  }
+
+  &.gradient svg path + path + path {
+    display: block;
+  }
+}
+
+.cc-ax-num-field-icon {
+  background: #13a8e0;
+}
+
+.cc-hc-num-field-icon {
+  background: #f37421;
+}
+
+.cc-elo-num-field-icon {
+  background: #000;
+}
+
+.cc-ff-num-field-icon {
+  background: #6093ca;
+}
+
+.cc-ls-num-field-icon {
+  background: #283a97;
+}
+
+.cc-ls-num-field-icon,
+.cc-ff-num-field-icon,
+.cc-elo-num-field-icon,
+.cc-hc-num-field-icon,
+.cc-ax-num-field-icon,
+.cc-ds-num-field-icon,
+.cc-dc-num-field-icon,
+.cc-ca-num-field-icon,
+.cc-to-num-field-icon,
+.cc-ve-num-field-icon,
+.cc-vi-num-field-icon {
+  color: #fff;
+}

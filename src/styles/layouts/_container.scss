@@ -1,0 +1,97 @@
+.cc-img-container {
+    width: 100%;
+    max-width: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    // transition: height 0.1s ease, -webkit-transform 0.6s;
+    // -webkit-transition: height 0.1s ease, -webkit-transform 0.6s;
+    // transition: height 0.1s ease, transform 0.6s;
+    // transition: height 0.1s ease, transform 0.6s, -webkit-transform 0.6s;
+  
+    transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+
+    cursor: pointer;
+
+    .lightcolor {
+      -webkit-transition: fill 0.5s;
+      transition: fill 0.5s;
+    }
+    .darkcolor {
+      -webkit-transition: fill 0.5s;
+      transition: fill 0.5s;
+    }
+    .lightblue {
+      fill: #03a9f4;
+    }
+    .lightbluedark {
+      fill: #0288d1;
+    }
+    .red {
+      fill: #ef5350;
+    }
+    .reddark {
+      fill: #d32f2f;
+    }
+    .purple {
+      fill: #ab47bc;
+    }
+    .purpledark {
+      fill: #7b1fa2;
+    }
+    .cyan {
+      fill: #26c6da;
+    }
+    .cyandark {
+      fill: #0097a7;
+    }
+    .green {
+      fill: #66bb6a;
+    }
+    .greendark {
+      fill: #388e3c;
+    }
+    .lime {
+      fill: #d4e157;
+    }
+    .limedark {
+      fill: #afb42b;
+    }
+    .yellow {
+      fill: #ffeb3b;
+    }
+    .yellowdark {
+      fill: #f9a825;
+    }
+    .orange {
+      fill: #ff9800;
+    }
+    .orangedark {
+      fill: #ef6c00;
+    }
+    .grey {
+      fill: #bdbdbd;
+    }
+    .greydark {
+      fill: #616161;
+    }
+
+    &.preload {
+      display: none;
+      * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+      }
+    }
+
+
+    &.flipped {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+  }

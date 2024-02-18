@@ -1,0 +1,449 @@
+$color_1: #707070;
+$color_2: #fff;
+$color_3: #47525d;
+// $font-family_1: "Raleway";
+// $font-family_2: "Source Code Pro", monospace;
+// $font-family_3: "Rock Salt", cursive;
+// $background-color_1: #f9f9f9;
+// $background-color_2: #909090;
+
+/* CREDIT CARD IMAGE STYLING */
+/* CHANGEABLE CARD ELEMENTS */
+/* FRONT OF CARD */
+/* BACK OF CARD */
+/* FLIP ANIMATION */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color_1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: $font-family_1;
+}
+
+
+
+
+
+.payform {
+  .credit-card-form {
+
+    .cc-num-field-icon {
+      line-height: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 30px;
+      border-radius: 0 4px 4px 0;
+      padding: 5px 0;
+      
+      svg {
+        margin: auto;
+        max-height: 30px;
+        max-width: 50px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+
+
+    .cc-unk-num-field-icon {
+      border-radius: 0;
+      padding: 0;
+      width: 60px;
+      height: 40px;
+      line-height: 40px;
+      
+      svg {
+        max-height: 40px;
+        max-width: 60px;
+      }
+    }
+    
+    .cc-cu-num-field-icon {
+      background: #0e4c96;
+    }
+    
+    .cc-vi-num-field-icon {
+      background: #25459a;
+      color: #fff;
+    }
+    
+    .cc-to-num-field-icon {
+      background: #10427a;
+      color: #fff;
+    }
+    
+    .cc-jc-num-field-icon {
+      background: #0e4c96;
+    }
+    
+    .cc-n-num-field-icon {
+      background: #e21e27;
+    }
+    
+    .cc-dc-num-field-icon {
+      background: #0079be;
+      color: #fff;
+    }
+    
+    .cc-ds-num-field-icon {
+      background: #f58220;
+      color: #fff;
+      
+      &.gradient svg path:nth-child(3),
+      &.gradient svg path + path {
+        display: none;
+      }
+      
+      &.gradient svg path + path + path {
+        display: block;
+      }
+    }
+    
+    .cc-ax-num-field-icon {
+      background: #13a8e0;
+      color: #fff;
+    }
+    
+    .cc-ve-num-field-icon {
+      background: #25459a;
+      color: #fff;
+    }
+    
+    .cc-ca-num-field-icon {
+      background: #10427a;
+      color: #fff;
+    }
+    
+    .cc-hc-num-field-icon {
+      background: #f37421;
+      color: #fff;
+    }
+    
+    .cc-elo-num-field-icon {
+      background: #000;
+      color: #fff;
+    }
+    
+    .cc-ff-num-field-icon {
+      background: #6093ca;
+      color: #fff;
+    }
+    
+    .cc-ls-num-field-icon {
+      background: #283a97;
+      color: #fff;
+    }
+  }
+  
+  .cc-image-wrapper {
+    .credit-card-image-container {
+
+      &.preload {
+        display: none;
+        * {
+          -webkit-transition: none !important;
+          -moz-transition: none !important;
+          -ms-transition: none !important;
+          -o-transition: none !important;
+          transition: none !important;
+        }
+      }
+      
+      .credit-card-image-front {
+        .cc-vi-icon-info {
+          color: #fff;
+        }
+        
+        .cc-to-icon-info {
+          color: #000;
+        }
+        
+        .cc-dc-icon-info {
+          color: #fff;
+        }
+        
+        .cc-ds-icon-info {
+          color: #fff;
+          
+          &.gradient svg path:nth-child(3),
+          &.gradient svg path + path {
+            display: none;
+          }
+          
+          &.gradient svg path + path + path {
+            display: block;
+          }
+        }
+        
+        .cc-ax-icon-info {
+          color: #000;
+        }
+        
+        .cc-ve-icon-info {
+          color: #000;
+        }
+        
+        .cc-ca-icon-info {
+          color: #fff;
+        }
+        
+        .cc-hc-icon-info {
+          color: #f37421;
+        }
+        
+        .cc-elo-icon-info {
+          color: #000;
+        }
+        
+        .cc-ff-icon-info {
+          color: #fff;
+        }
+        
+        .cc-ls-icon-info {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.payment-title {
+  width: 100%;
+  text-align: center;
+}
+label {
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+input {
+  margin-top: 3px;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+}
+.container {
+  width: 100%;
+  max-width: 400px;
+  max-height: 251px;
+  height: 54vw;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.form-container {
+  .field-container {
+    &:first-of-type {
+      grid-area: name;
+    }
+    &:nth-of-type(2) {
+      grid-area: number;
+    }
+    &:nth-of-type(3) {
+      grid-area: expiration;
+    }
+    &:nth-of-type(4) {
+      grid-area: security;
+    }
+  }
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 90px 90px 90px;
+  grid-template-areas: "name name" "number number" "expiration security";
+  max-width: 400px;
+  padding: 20px;
+  color: $color_1;
+}
+.field-container {
+  input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  position: relative;
+}
+
+/*
+.ccicon {
+  height: 38px;
+  position: absolute;
+  right: 6px;
+  top: calc(50% - 17px);
+  width: 60px;
+}
+*/
+
+
+/*
+.credit-card-image-icon {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  svg {
+    width: 100px;
+    max-height: 60px;
+  }
+}
+*/
+
+
+
+.cc-image-wrapper {
+  width: 100%;
+  max-width: 400px;
+  max-height: 14rem;
+  height: 54vw;
+  padding: 20px;
+
+  .credit-card-image-container {
+    svg#cardfront {
+      width: 100%;
+      -webkit-box-shadow: 1px 5px 6px 0px black;
+      box-shadow: 1px 5px 6px 0px black;
+      border-radius: 22px;
+    }
+    svg#cardback {
+      width: 100%;
+      -webkit-box-shadow: 1px 5px 6px 0px black;
+      box-shadow: 1px 5px 6px 0px black;
+      border-radius: 22px;
+    }
+    .lightcolor {
+      -webkit-transition: fill 0.5s;
+      transition: fill 0.5s;
+    }
+    .darkcolor {
+      -webkit-transition: fill 0.5s;
+      transition: fill 0.5s;
+    }
+    .lightblue {
+      fill: #03a9f4;
+    }
+    .lightbluedark {
+      fill: #0288d1;
+    }
+    .red {
+      fill: #ef5350;
+    }
+    .reddark {
+      fill: #d32f2f;
+    }
+    .purple {
+      fill: #ab47bc;
+    }
+    .purpledark {
+      fill: #7b1fa2;
+    }
+    .cyan {
+      fill: #26c6da;
+    }
+    .cyandark {
+      fill: #0097a7;
+    }
+    .green {
+      fill: #66bb6a;
+    }
+    .greendark {
+      fill: #388e3c;
+    }
+    .lime {
+      fill: #d4e157;
+    }
+    .limedark {
+      fill: #afb42b;
+    }
+    .yellow {
+      fill: #ffeb3b;
+    }
+    .yellowdark {
+      fill: #f9a825;
+    }
+    .orange {
+      fill: #ff9800;
+    }
+    .orangedark {
+      fill: #ef6c00;
+    }
+    .grey {
+      fill: #bdbdbd;
+    }
+    .greydark {
+      fill: #616161;
+    }
+    width: 100%;
+    max-width: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    cursor: pointer;
+
+
+    .credit-card-image-front {
+      position: absolute;
+      width: 100%;
+      max-width: 400px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+      color: $color_3;
+
+
+
+
+
+
+
+
+
+
+
+    }
+    .credit-card-image-back {
+      position: absolute;
+      width: 100%;
+      max-width: 400px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+      color: $color_3;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+    &.flipped {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+  }
+}
+

@@ -1,0 +1,166 @@
+import {
+  TCreditCardFormNumberInputDynamicMaskType,
+  TCreditCardFormNumberInputMask,
+} from "../../typings";
+import { masks } from "./FormNumberMasks";
+import { patterns } from "./FormNumberPatterns";
+import { types } from "./Types";
+
+export const formNumberInputMask = [
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.elo,
+    cardtype: types.elo,
+  },
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.ve,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.ve,
+  },
+  {
+    mask: [
+      masks["4-4-4"],
+      masks["4-4-5"],
+      masks["4-6-4"],
+      masks["4-6-5"],
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: patterns.to,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.to,
+  },
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.ff,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.ff,
+  },
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.n,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.n,
+  },
+  {
+    mask: [
+      masks["4-4-5"],
+      masks["4-6-4"],
+      masks["4-6-5"],
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: patterns.vi,
+    // cvcLength: [3],
+    lazy: false,
+
+    // luhn: true,
+    cardtype: types.vi,
+  },
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.ca,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.ca,
+  },
+  {
+    mask: [masks["4-6-5"]],
+    pattern: patterns.ax,
+    // cvcLength: [4],
+    // luhn: true,
+    cardtype: types.ax,
+  },
+  {
+    mask: [
+      masks["4-4-5"],
+      masks["4-6-4"],
+      masks["4-6-5"],
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: patterns.hc,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.hc,
+  },
+  {
+    mask: [masks["4-6-4"]],
+    pattern: patterns.dc,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.dc,
+  },
+  {
+    mask: [masks["4-4-4-4"]],
+    pattern: patterns.ds,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.ds,
+  },
+  {
+    mask: [masks["4-4-4-4"], masks["4-8-5"], masks["4-5-5-4"], masks["6-13"]],
+    pattern: patterns.cu,
+    // cvcLength: [3],
+    // luhn: false,
+    cardtype: types.cu,
+  },
+  {
+    mask: [
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: "^(?:35\\d{0,2})\\d{0,12}",
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.jc,
+  },
+  {
+    mask: [masks["4-6-5"]],
+
+    pattern: "^(?:2131|1800)\\d{0,11}",
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.jc,
+  },
+  {
+    mask: [
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: patterns.ls,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.ls,
+  },
+  {
+    mask: [
+      masks["4-4-5"],
+      masks["4-6-4"],
+      masks["4-6-5"],
+      masks["4-4-4-4"],
+      masks["4-8-5"],
+      masks["4-5-5-4"],
+      masks["4-4-4-4-3"],
+    ],
+    pattern: undefined,
+    // cvcLength: [3],
+    // luhn: true,
+    cardtype: types.unk,
+  },
+];
